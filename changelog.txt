@@ -1,0 +1,47 @@
+Changelog
+--------------------
+Currently for use with Zenphoto version 1.4.6 DEV
+
+0.97	4/28/14 Latest update, still in progress....
+	- Added more options to toggle the display of dates on various objects (multiple)
+	- Added option to have separate homepage with just gallery description source (multiple)
+	- Added magnific image popup with details, comments, etc option instead of or in addition to dedicated image page (multiple)
+	- Added Google Analytics support (themeoptins.php and inc/header.php)
+	- Fixed slideshow issues. Galleria slideshow is now independent of other core slideshow options. (multiple files)
+	- Updated Galleria version to 3.5 - fixes some swiping issues. Tweaked mobile display. (js file and inc/galleria-jscall.php)
+	- Return of album/article prev/next arrow links by title, vintage Gallerriffic theme. (all album layouts, news.php)
+	- Added force of 16px base font-size for mobile and tablet devices, just has to be done.... (inc/header.php)
+	- Added tweaks for displaying youtube videos via textobject plugin. (css/style.css and js/zpbase_js.js)
+	- Replaced manual head title generation with new function for this purpose. (header.php)
+	- Fixed resetting of context when viewing latest images as home page. (inc/index-galleria.php and inc/index-sdscroll.php)
+	- Added "x of x" on image.php page (image.php)
+	- jump menu, jump menu w/ jquery chosen script (customm css to drop UP), or no select box menu throughout site options. (multiple)
+	- Added support for featured image plugin by acrylian for news and pages. (news.php and pages.php)
+	- Galleria slideshow improvements, added support for slideshow2. (multiple)
+	- Changes in Pages and News layout:
+		- inc/sidebar.php added, is the sidebar for all news and page layouts which includes page menu, news cats, and latest comments.
+		- featured image plugin (added support), extra content, and codeblock outputs now on floated inset of page and article views.
+	- Cleaned up sidebar menu displays. (css/style.css)
+	- Added check for theme options being set. (strange, could have to do with dynamic image size setting based off width of site.)
+	- Multiple CSS fixes, optimizations. (css/style.css)
+	- Fixes for 1.4.6, deprecations, removed combinews (replaced with galleryArticles plugin), etc.
+0.92	3/16/14
+	- Fixed path to jquery in slideshow.php. (slideshow.php)
+0.91	3/14/14
+	- Fixed search issues with pages and news and pagination. (search.php)	
+0.90	3/6/14
+	- Fixed required file includes in functions throwing 500 error. (functions.php)
+	- Fixed album displays in Galleria layouts (album-galleria.php and inc/index-galleria.php)
+	- Added Smooth DIV Scroll Album and Homepage Layouts. (multiple new files)
+	- Added support for image cache manager (themeoptions.php)
+	- Fixed responsiveness of lock image, when album is password protected. (zpbase_js.js)
+	- Fixed background setting for dark contrast option (css/style.css) - Thanks jonah!
+	- Multiple CSS fixes, optimizations. (css/style.css)
+0.81	1/15/14
+	- Fixed Disqus comments for pages. (functions.php)
+	- Fixed slideshow on mobile devices. (inc/galleria_jscall.php)
+0.8
+	Initial release.
+	
+
+	
