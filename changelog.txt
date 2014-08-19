@@ -1,6 +1,6 @@
 Changelog
 --------------------
-Currently for use with Zenphoto version 1.4.6 DEV
+Currently for use with Zenphoto version 1.4.6
 
 0.97	4/28/14 Latest update, still in progress....
 	- Added more options to toggle the display of dates on various objects (multiple)
