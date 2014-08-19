@@ -2,6 +2,11 @@ Changelog
 --------------------
 Currently for use with Zenphoto version 1.4.6
 
+1.0		8/19/14
+	- Added mobile menu. (header.php and style.css)
+	- Added option on single image page to scale image height to fit in screen. (image.php)
+	
+
 0.97	4/28/14 Latest update, still in progress....
 	- Added more options to toggle the display of dates on various objects (multiple)
 	- Added option to have separate homepage with just gallery description source (multiple)

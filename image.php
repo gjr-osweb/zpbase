@@ -21,6 +21,24 @@ include ('inc/header.php'); ?>
 						<?php } ?>
 					</div>
 					<?php printDefaultSizedImage(getBareImageTitle(),'remove-attributes'); ?>
+					<?php if (getOption('zpbase_verticalscale')) { ?>
+					<script>
+						function resizeFullImageDiv() {
+							vpw = $(window).width();
+							vph = $(window).height()*(.60);
+							if (vph > <?php echo getOption('image_size'); ?>) { vph = <?php echo getOption('image_size'); ?>; }
+							if (vph < vpw) { 
+								$('#image-full').css({'height': vph + 'px'}); 
+							} else {
+								$('#image-full').css({'height': 'auto'}); 
+							}
+						}
+						resizeFullImageDiv();
+						window.onresize = function(event) {
+							resizeFullImageDiv();
+						}
+					</script>
+					<?php } ?>
 				</div>
 				<div id="object-info">
 					<?php 

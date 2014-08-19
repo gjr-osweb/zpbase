@@ -22,6 +22,7 @@ class ThemeOptions {
 		setThemeOptionDefault('zpbase_pnglogo', '');
 		setThemeOptionDefault('zpbase_style', 'light');
 		setThemeOptionDefault('zpbase_maxwidth', '960');
+		setThemeOptionDefault('zpbase_verticalscale', true);
 		setThemeOptionDefault('zpbase_align', 'center');
 		setThemeOptionDefault('zpbase_date_albums', true);
 		setThemeOptionDefault('zpbase_date_images', true);
@@ -122,6 +123,9 @@ class ThemeOptions {
 				'order'=>3, 
 				'multilingual' => 0,
 				'desc' => gettext('Set the max-width of site in pixels.  Site is fluid but will not expand beyond this width for styling and image sizing purposes. <p class="notebox">*<strong>Note:</strong> The theme uses this value also to set the default image and thumb size as a percentage of this width, so that maximum efficiency of image/thumb size is gained while still filling the column width with the image.  When you change this number, images will be re-cached on load.  It is recommended to keep the max-width in the 900-1200 range.</p>')),
+			gettext('Vertical Scale Full Image') => array('key' => 'zpbase_verticalscale', 'type' => OPTION_TYPE_CHECKBOX, 
+				'order' => 3.1,
+				'desc' => gettext("If unchecked, the full image will scale to max-width of the site.  If checked, the full image will also scale vertically to the viewport using javascript to ensure it is always entirely visible on the full image page.")),
 			gettext('General Alignment') => array('key' => 'zpbase_align', 'type' => OPTION_TYPE_RADIO, 
 				'order' => 4,
 				'buttons' => array(gettext('Center')=>'center', gettext('Left')=>'left'),

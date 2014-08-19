@@ -102,6 +102,26 @@ if (!defined('WEBPATH')) die();?>
 	<meta name="description" content="<?php echo $zpbase_metadesc; ?>" />	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="<?php echo $_zp_themeroot; ?>/css/style.css">
+
+	<script>
+	// Mobile Menu
+	$(function() {
+		var navicon = $('#nav-icon');
+		menu = $('#nav');
+		menuHeight	= menu.height();
+		$(navicon).on('click', function(e) {
+			e.preventDefault();
+			menu.slideToggle();
+			$(this).toggleClass('menu-open');
+		});
+		$(window).resize(function(){
+        	var w = $(window).width();
+        	if(w > 320 && menu.is(':hidden')) {
+        		menu.removeAttr('style');
+        	}
+    	});
+	});
+	</script>
 	
 	<?php if (getOption('zpbase_selectmenu') == 'chosen') { ?>
 	<link rel="stylesheet" href="<?php echo $_zp_themeroot; ?>/css/chosen.css">
@@ -228,6 +248,7 @@ if (!defined('WEBPATH')) die();?>
 					</li>
 					<?php } ?>
 				</ul>
+				<a href="#" id="nav-icon"><span><?php echo gettext('Menu'); ?></span></a>
 			</div>
 		</div>
 	</div>

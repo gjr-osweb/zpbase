@@ -67,6 +67,8 @@ include ('inc/header.php'); $zpbase_newsstyle = getOption('zpbase_newsstyle'); ?
 						<?php } else if (in_context(ZP_ZENPAGE_NEWS_DATE)) { ?>
 						<div><?php printNewsIndexURL($newsname); echo ' / '; ?></div>
 						<h1><?php printCurrentNewsArchive(); ?></h1>
+						<?php } else { ?>
+						<h1><?php echo $newsname; ?></h1>
 						<?php } ?>
 					</div>
 					<div id="object-desc">
