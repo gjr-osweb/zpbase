@@ -8,6 +8,8 @@ A Zenphoto theme
 About
 --------------
 
+Install/upload the "zpbase" folder into the "themes" folder of your Zenphoto installation. Activate theme and set options in the backend administration of Zenphoto.
+
 Zenphoto is a standalone CMS for multimedia focused websites. Our focus lies on being easy to use and having all the features there when you need them (but out of the way if you do not.)
 
 Zenphoto features support for images, video and audio formats, and the Zenpage CMS plugin provides a fully integrated news section (blog) and custom pages to run entire websites.
