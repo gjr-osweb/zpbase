@@ -181,12 +181,11 @@ function printBaseAlbumMenuJump($option = "count", $indexname = "Gallery Index",
 		<option value="<?php echo getCustomPageURL('gallery'); ?>"><?php echo $indexname; ?></option>
 		<?php }
 	}
-	
-	$albums = $_zp_gallery->getAlbums();
-	printAlbumMenuJumpAlbum($albums, $option, $albumpath, $firstimagelink);
+	printAlbumMenuJump($option,"", $firstimagelink, NULL, true);
 	?>
 	</select>
 	</form>
+	
 <?php }
 }
 
