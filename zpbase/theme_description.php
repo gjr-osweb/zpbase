@@ -1,9 +1,7 @@
 <?php
-/*	zpBase theme_description.php 
-*	Zenphoto theme definition file. Is used to display this information when viewing the themes in the backend.
-*	http://www.oswebcreations.com
-================================================== */
-
+// zpBase theme_description.php 
+// Zenphoto theme definition file. Is used to display this information when viewing the themes in the backend.
+// http://www.oswebcreations.com
 $theme_description['name'] = 'zpBase';
 $theme_description['author'] = 'gjr - oswebcreations.com';
 $theme_description['version'] = '0.97';
