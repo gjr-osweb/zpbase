@@ -23,7 +23,11 @@
 					<?php while (next_album()): ?>
 					<div class="image-unit">
 						<a class="album-thumb" href="<?php echo html_encode(getAlbumURL());?>" title="<?php printBareAlbumTitle();?>">
-							<?php printAlbumThumbImage(getBareAlbumTitle(),'remove-attributes'); ?>
+							<?php if (getOption('thumb_crop')) {
+							printCustomAlbumThumbImage(getAnnotatedAlbumTitle(),getOption('thumb_size'),getOption('thumb_size'),getOption('thumb_size'),getOption('thumb_size'),getOption('thumb_size'),null,null,'remove-attributes');
+							} else {
+							printAlbumThumbImage(getAnnotatedAlbumTitle(),'remove-attributes');
+							} ?>
 						</a>
 						<h3><?php printBareAlbumTitle();?></h3>
 						<p class="album-desc"><?php echo truncate_string(strip_tags(getAlbumDesc()),120,'...'); ?></p>

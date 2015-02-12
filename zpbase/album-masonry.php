@@ -53,7 +53,11 @@ include ('inc/header.php'); ?>
 						<div class="masonry-style-padding">
 							<h3><?php printAlbumTitle(); ?></h3>
 							<a class="album-thumb" href="<?php echo html_encode(getAlbumURL()); ?>" title="<?php printBareAlbumTitle(); ?>">
-								<?php printAlbumThumbImage(getBareAlbumTitle(),'remove-attributes'); ?>
+								<?php if (getOption('thumb_crop')) {
+								printCustomAlbumThumbImage(getAnnotatedAlbumTitle(),getOption('thumb_size'),getOption('thumb_size'),getOption('thumb_size'),getOption('thumb_size'),getOption('thumb_size'),null,null,'remove-attributes');
+								} else {
+								printAlbumThumbImage(getAnnotatedAlbumTitle(),'remove-attributes');
+								} ?>
 							</a>
 							<p class="album-desc"><?php echo strip_tags(truncate_string(getAlbumDesc(),140,'...')); ?></p>
 							<div class="album-stats">
@@ -70,10 +74,18 @@ include ('inc/header.php'); ?>
 					<div class="masonry-style-item">
 						<div class="masonry-style-padding">
 							<?php if (getOption('zpbase_nodetailpage')) { 
-							printImageThumb(getBareImageTitle(),'remove-attributes');
+								if (getOption('thumb_crop')) {
+								printCustomSizedImage(getAnnotatedImageTitle(),getOption('thumb_size'),getOption('thumb_size'),getOption('thumb_size'),getOption('thumb_size'),getOption('thumb_size'),null,null,'remove-attributes',null,true);
+								} else { 
+								printImageThumb(getBareImageTitle(),'remove-attributes'); 
+								}
 							} else { ?>
 							<a href="<?php echo html_encode(getImageURL()); ?>" title="<?php printBareImageTitle(); ?>">
-								<?php printImageThumb(getBareImageTitle(),'remove-attributes'); ?>
+								<?php if (getOption('thumb_crop')) {
+								printCustomSizedImage(getAnnotatedImageTitle(),getOption('thumb_size'),getOption('thumb_size'),getOption('thumb_size'),getOption('thumb_size'),getOption('thumb_size'),null,null,'remove-attributes',null,true);
+								} else { 
+								printImageThumb(getBareImageTitle(),'remove-attributes'); 
+								} ?>
 							</a>
 							<?php } ?>
 							<?php if ((getOption('zpbase_magnific_masonry')) || (getOption('zpbase_nodetailpage'))) { 

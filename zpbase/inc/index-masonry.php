@@ -24,7 +24,11 @@
 						<div class="masonry-style-padding">
 							<h3><?php printAlbumTitle(); ?></h3>
 							<a class="album-thumb" href="<?php echo html_encode(getAlbumURL()); ?>" title="<?php printBareAlbumTitle(); ?>">
-								<?php printAlbumThumbImage(getBareAlbumTitle(),'remove-attributes'); ?>
+								<?php if (getOption('thumb_crop')) {
+								printCustomAlbumThumbImage(getAnnotatedAlbumTitle(),getOption('thumb_size'),getOption('thumb_size'),getOption('thumb_size'),getOption('thumb_size'),getOption('thumb_size'),null,null,'remove-attributes');
+								} else {
+								printAlbumThumbImage(getAnnotatedAlbumTitle(),'remove-attributes');
+								} ?>
 							</a>
 							<p class="album-desc"><?php echo truncate_string(strip_tags(getAlbumDesc()),140,'...'); ?></p>
 							<div class="album-stats">
