@@ -2,7 +2,7 @@ Changelog
 --------------------
 Currently for use with Zenphoto version 1.4.7
 
-1.0		2/11/15
+1.1		2/11/15
 	- Fixed album menu for 1.4.7 (Thanks Acrylian!).
 	- Fixed bug when crop thumbnails is enabled, setting incorrect ch and cw, not sure why. Changed image function when cropping.
 	- Version updates.
